@@ -47,9 +47,9 @@ class Solution {
     }
 
     private int pack(int fromR, int fromC, int toR, int toC) {
-        return (((fromR + BIAS) & MASK) << (BIAS | (BIAS << 1)))
-                | (((fromC + BIAS) & MASK) << (BIAS << 1))
-                | (((toR + BIAS) & MASK) << BIAS)
+        return (((fromR + BIAS) & MASK) << (SHIFT | (SHIFT << 1)))
+                | (((fromC + BIAS) & MASK) << (SHIFT << 1))
+                | (((toR + BIAS) & MASK) << SHIFT)
                 | (toC + BIAS);
     }
 }
