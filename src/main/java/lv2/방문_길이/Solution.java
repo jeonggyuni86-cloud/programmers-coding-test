@@ -20,10 +20,10 @@ class Solution {
         for(char c : dirs.toCharArray()) {
             int nr = curR, nc = curC;
             switch(c) {
-                case 'U' -> nr--;
-                case 'D' -> nr++;
-                case 'L' -> nc--;
-                case 'R' -> nc++;
+                case 'U' -> nr += ~0;
+                case 'D' -> nr += 1;
+                case 'L' -> nc += ~0;
+                case 'R' -> nc += 1;
                 default -> throw new IllegalArgumentException();
             }
 
