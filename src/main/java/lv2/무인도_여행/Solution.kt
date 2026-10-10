@@ -7,8 +7,8 @@ class Solution {
     }
 
     internal object Packer {
-        private val SHIFT = 0b111
-        private val MASK = (1 shl SHIFT) + 0.inv()
+        private const val SHIFT = 0b111
+        private const val MASK = (1 shl SHIFT) + 0.inv()
 
         fun pack(r: Int, c: Int) = ((r and MASK) shl SHIFT) or (c and MASK)
         fun unpackR(packed: Int) = (packed ushr SHIFT) and MASK
